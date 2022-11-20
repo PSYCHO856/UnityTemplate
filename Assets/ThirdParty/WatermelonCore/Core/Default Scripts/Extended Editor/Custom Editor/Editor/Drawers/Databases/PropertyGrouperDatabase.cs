@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+
+namespace Watermelon
+{
+    public static class PropertyGrouperDatabase
+    {
+        private static readonly Dictionary<Type, PropertyGrouper> groupersByAttributeType;
+
+        static PropertyGrouperDatabase()
+        {
+            groupersByAttributeType = new Dictionary<Type, PropertyGrouper>();
+            groupersByAttributeType[typeof(BoxGroupAttribute)] = new BoxGroupPropertyGrouper();
+        }
+
+        public static PropertyGrouper GetGrouperForAttribute(Type attributeType)
+        {
+            PropertyGrouper grouper;
+            if (groupersByAttributeType.TryGetValue(attributeType, out grouper))
+                return grouper;
+            return null;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+﻿using System;
+using UnityEngine;
+
+[AttributeUsage(AttributeTargets.Field)]
+public class InspectorShow : PropertyAttribute
+{
+    public string label; //要显示的字符
+
+    public InspectorShow(string label)
+    {
+        this.label = label;
+    }
+}
+
+
+public class TitleAttribute : PropertyAttribute
+{
+    /// <summary> 标题颜色 </summary>
+    public string htmlColor;
+
+    /// <summary> 标题名称 </summary>
+    public string title;
+
+    /// <summary> 在属性上方添加一个标题 </summary>
+    /// <param name="title">标题名称</param>
+    /// <param name="htmlColor">标题颜色</param>
+    public TitleAttribute(string title, string htmlColor = "#FFFFFF")
+    {
+        this.title = title;
+        this.htmlColor = htmlColor;
+    }
+}
+
+
+[AttributeUsage(AttributeTargets.Field)]
+public class EnumNameAttribute : PropertyAttribute
+{
+    /// <summary> 枚举名称 </summary>
+    public string name;
+
+    public new int[] order = new int[0];
+
+    public EnumNameAttribute(string name)
+    {
+        this.name = name;
+    }
+
+    public EnumNameAttribute(string label, params int[] order)
+    {
+        name = label;
+        this.order = order;
+    }
+}
