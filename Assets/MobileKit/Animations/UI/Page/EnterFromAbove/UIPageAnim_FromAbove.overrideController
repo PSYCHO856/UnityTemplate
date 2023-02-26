@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UIPageAnim_FromAbove
+  m_Controller: {fileID: 9100000, guid: 07360c70000a4ae4e9e8772124f3c237, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 76c60e552ac92e44c949b9888b6d6e21, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 84f40f744b0708f4faa4c82ba096c44e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9619a684d3782cc49b3ddab84e28d96f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c70a302ff7a1a1644b285dd81af7d5bc, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 763bc62e9e64dd746b01ea0b8937a92a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 38bcb32a309e92f4bb6944de872c391a, type: 2}

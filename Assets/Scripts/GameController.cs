@@ -1,3 +1,4 @@
+using MobileKit;
 using UnityEngine;
 using Peoples;
 
@@ -12,6 +13,7 @@ public class GameController : Singleton<GameController>
     {
         UIController.Open(UIPageId.Main);
         peo = new People1(Instance.Root3DObj.GetChild(0));
+        RecordManager.Instance.Init();
     }
 
     // Update is called once per frame
