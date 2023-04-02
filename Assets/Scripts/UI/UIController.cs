@@ -2,6 +2,7 @@
 using System.IO;
 using UnityEngine;
 using UnityEngine.U2D;
+using MobileKit;
 
 public enum UIPageId
 {
@@ -35,6 +36,7 @@ public class UIController : Singleton<UIController>
     private static SpriteAtlas CarIconAtlas;
     private static Canvas uiCanvas;
     [SerializeField] private UIBasePage mainPage;
+    [SerializeField] private UIBasePage infoPage;
 
     [SerializeField] private SpriteAtlas spriteAtlas;
     [SerializeField] private UIDefine uiDefine;
@@ -49,6 +51,7 @@ public class UIController : Singleton<UIController>
         DontDestroyOnLoad(gameObject);
         uiCanvas = GetComponent<Canvas>();
         pages.Add(UIPageId.Main, Instantiate(mainPage, transform));
+        pages.Add(UIPageId.Info, Instantiate(infoPage, transform));
 
         SpriteAtlas = spriteAtlas;
         foreach (var page in pages) page.Value.gameObject.SetActive(false);
@@ -72,7 +75,6 @@ public class UIController : Singleton<UIController>
     {
         if (pages.TryGetValue(id, out var page))
         {
-            page.gameObject.SetActive(false);
             page.OnClose();
         }
     }

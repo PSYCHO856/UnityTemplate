@@ -11,15 +11,18 @@ public class GameController : Singleton<GameController>
     // Start is called before the first frame update
     private void Start()
     {
-        UIController.Open(UIPageId.Main);
+        
         peo = new People1(Instance.Root3DObj.GetChild(0));
         RecordManager.Instance.Init();
+        
+        UIController.Open(UIPageId.Main);
+
     }
 
     // Update is called once per frame
     private void Update()
     {
-        
+
     }
 }
 

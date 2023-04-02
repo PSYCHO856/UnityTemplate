@@ -11,6 +11,7 @@ namespace MobileKit
         public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             base.OnStateExit(animator, stateInfo, layerIndex);
+            Debug.Log("UIPageAnimEventTrigger OnStateExit" + stateInfo);
             onDoneAnimation?.Invoke(stateInfo);
         }
     }

@@ -73,12 +73,11 @@ namespace MobileKit
         {
             Animator ??= GetComponent<Animator>();
             CanvasGroup ??= GetComponent<CanvasGroup>();
-            
             if (Animator != null)
             {
                 Animator.enabled = true;
-                UIPageAnimEventTrigger.onDoneAnimation += OnCloseDone;
                 Animator.SetTrigger(AnimParamClose);
+                UIPageAnimEventTrigger.onDoneAnimation += OnCloseDone;
                 if (IsPopUp)
                 {
                     popUpBg.MDOFade(0f, 0.1f, true).SetEasing(Ease.Type.Linear);

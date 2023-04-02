@@ -100,7 +100,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
 --- !u!114 &2207533370607657120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,5 +114,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainPage: {fileID: -4273351359875430587, guid: 84d3db1dc7b11ff43b8f0ce37e5d1101, type: 3}
+  infoPage: {fileID: -7158213683974527156, guid: 43cf7ac2cbdcb1c438a90ced9dc5deab, type: 3}
   spriteAtlas: {fileID: 0}
   uiDefine: {fileID: 11400000, guid: e4c873188c734a445abf5fdd656086ff, type: 2}
